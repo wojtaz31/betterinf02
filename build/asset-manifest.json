@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/betterinf02/static/css/main.b490bfd3.css",
+    "main.js": "/betterinf02/static/js/main.994172e1.js",
+    "index.html": "/betterinf02/index.html",
+    "main.b490bfd3.css.map": "/betterinf02/static/css/main.b490bfd3.css.map",
+    "main.994172e1.js.map": "/betterinf02/static/js/main.994172e1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b490bfd3.css",
+    "static/js/main.994172e1.js"
+  ]
+}
