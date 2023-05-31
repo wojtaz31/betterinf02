@@ -23,6 +23,17 @@ interface Question {
 let przerobione: any = []
 let pytania: any = []
 
+let iloscPoprawnych = 0;
+let iloscUdzielonych = 0;
+
+    if(localStorage.getItem('iloscPoprawnych')&&localStorage.getItem('iloscUdzielonych')){
+      let poprawne = JSON.parse(localStorage.getItem('iloscPoprawnych') ?? '') ?? 0
+      let udzielone = JSON.parse(localStorage.getItem('iloscUdzielonych') ?? '') ?? 0
+
+      iloscPoprawnych = poprawne
+      iloscUdzielonych = udzielone
+    }
+
     if (localStorage.getItem('przerobione')){
     const storedData = JSON.parse(localStorage.getItem('przerobione') ?? '');
     console.log(storedData)
@@ -63,8 +74,13 @@ export default function App() {
   };
 
   const handleNextClick = () => {
+    iloscUdzielonych++;
+    localStorage.setItem('iloscUdzielonych', JSON.stringify(iloscUdzielonych));
     if (selectedOption === currentQuestion.a && !flag) {
       przerobione.push(+currentQuestion.q.id - 1)
+      iloscPoprawnych++;
+      localStorage.setItem('iloscPoprawnych', JSON.stringify(iloscPoprawnych));
+
       //console.log(przerobione)
     }
     setFlag(false)
@@ -98,12 +114,24 @@ export default function App() {
                 color: 'white'
               }}
             />
-            <Button sx={{}} variant="contained" onClick={()=>{
+            <Button sx={{p: 2}} onClick={()=>{
               localStorage.setItem('przerobione',JSON.stringify([]))
+              iloscUdzielonych=0;
+              localStorage.setItem('iloscUdzielonych', JSON.stringify(iloscUdzielonych));
+              iloscPoprawnych=0;
+              localStorage.setItem('iloscPoprawnych', JSON.stringify(iloscPoprawnych));
               window.location.reload();
             }}>
-            RESET
+            HARD RESET
           </Button>
+          <Button sx={{m: 2}} variant="contained" onClick={()=>{
+              iloscUdzielonych=0;
+              localStorage.setItem('iloscUdzielonych', JSON.stringify(iloscUdzielonych));
+              iloscPoprawnych=0;
+              localStorage.setItem('iloscPoprawnych', JSON.stringify(iloscPoprawnych));           
+              window.location.reload();
+            }}> Resetuj procenty</Button>
+          <a>{`Procent poprawnych odpowiedzi: ${((iloscPoprawnych/iloscUdzielonych)*100).toFixed(1)??0}%`}</a>
             {pytania.length > 1 ? (<><Typography>{`Przerobione pytania: ${2227-pytania.length}`}</Typography>
             <Typography>{`Pozostalo do przerobienia ${pytania.length}`}</Typography></>) : <></>}
             <br></br>
