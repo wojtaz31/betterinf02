@@ -38,15 +38,16 @@ export default function App() {
       pytania = questions.filter((pytanie) => {
         return !przerobione.includes(+pytanie.q.id - 1)
       })
-      console.log(przerobione)
+      console.log(pytania)
       localStorage.setItem('przerobione', JSON.stringify(przerobione));
 
       randomIndex = Math.floor(Math.random() * pytania.length);
     }
     else {
       randomIndex = Math.floor(Math.random() * questions.length);
+      return questions[randomIndex]
     }
-    return questions[randomIndex];
+    return pytania[randomIndex];
   };
 
   const [currentQuestion, setCurrentQuestion] = useState<Question>(loadRandomQuestion() as Question);
@@ -64,7 +65,7 @@ export default function App() {
   const handleNextClick = () => {
     if (selectedOption === currentQuestion.a && !flag) {
       przerobione.push(+currentQuestion.q.id - 1)
-      console.log(przerobione)
+      //console.log(przerobione)
     }
     setFlag(false)
     setAnswered(false);
