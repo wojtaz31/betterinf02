@@ -95,7 +95,7 @@ export default function App() {
       p: 2,
       backgroundColor: '#494949'
     }}>
-      {pytania.length === questions.length ? ( <>
+      {przerobione.length === questions.length ? ( <>
         <h1 style={{ color: 'white' }}>Congratulations ! Przerobiłeś wszystko, jest ogień.</h1>
         <Button sx={{p: 2, fontSize: 25, border: 'solid 5px black'}} onClick={()=>{
               localStorage.setItem('przerobione',JSON.stringify([]))
