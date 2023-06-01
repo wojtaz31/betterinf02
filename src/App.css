@@ -2,6 +2,11 @@ body{
   background: #494949;
 }
 
+#donation_link:hover{
+  color: #61dafb !important;
+  transition: 500ms ease-in-out;
+}
+
 .App {
   text-align: center;
   background: #494949;

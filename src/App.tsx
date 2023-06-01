@@ -49,6 +49,7 @@ export default function App() {
       pytania = questions.filter((pytanie) => {
         return !przerobione.includes(+pytanie.q.id - 1)
       })
+      if(!pytania){return 0}
       console.log(pytania)
       localStorage.setItem('przerobione', JSON.stringify(przerobione));
 
@@ -94,9 +95,20 @@ export default function App() {
       p: 2,
       backgroundColor: '#494949'
     }}>
-      {pytania.length === questions.length ? (
-        <h1 style={{ color: 'white' }}>Przerobiłeś wszystko, jest ogień.</h1>
-      ) :
+      {pytania.length === questions.length ? ( <>
+        <h1 style={{ color: 'white' }}>Congratulations ! Przerobiłeś wszystko, jest ogień.</h1>
+        <Button sx={{p: 2, fontSize: 25, border: 'solid 5px black'}} onClick={()=>{
+              localStorage.setItem('przerobione',JSON.stringify([]))
+              iloscUdzielonych=0;
+              localStorage.setItem('iloscUdzielonych', JSON.stringify(iloscUdzielonych));
+              iloscPoprawnych=0;
+              localStorage.setItem('iloscPoprawnych', JSON.stringify(iloscPoprawnych));
+              window.location.reload();
+            }}>
+            RESETUJ PROGRES I ROZPOCZNIJ OD NOWA
+          </Button>
+        <h1><a id='donation_link' style={{ color: 'white' }} target='_blank' href='https://paypal.me/wojtaz31?country.x=PL&locale.x=pl_PL'>Link do donacji</a></h1>
+      </>) :
         <><Card sx={{ mb: 2,
           backgroundColor: '#181818',
           color: 'white' }}>
