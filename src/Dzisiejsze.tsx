@@ -57,7 +57,7 @@ Bo były 2 typy I jeden mówi że cena musi być taka a drugi że nie może z cz
     <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}>alias rekordu A DNS - CNAME</Typography>
     <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}>netplan try </Typography>
     <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}>do czegu służy app store XDDDDDD</Typography>
-    <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}>Bramka Y=A+B odp: bramka OR</Typography>
+    <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}>Bramka zanegowana Y=A+B odp: bramka NOR</Typography>
     <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}>Usługa udostępniania internetu z telewizją, światłowód i koncentryk odp: HFC</Typography>
     <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}>uszkodzony bęben światłoczóły</Typography>
     <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}>attrib - zmiana właściwość +h, +s</Typography>
@@ -85,9 +85,9 @@ Bo były 2 typy I jeden mówi że cena musi być taka a drugi że nie może z cz
     <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}>urządzenie wejścia/wyjścia ekran dotykowy </Typography>
     <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}>IEEE 1284 LPT/Centronics</Typography>
     <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}>Po jakim czasie od rozpoczęcia RKO nieodwracalne skutki utrary oddychania - odp 4min</Typography>
-    <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}></Typography>
-    <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}></Typography>
-    <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}></Typography>
+    <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}>jak się bronić przed Social Engeneering - szkolenie z BHP</Typography>
+    <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}>normalizacja krajowa - unifikacja standardow, aby zapewnic kompatybilnosc</Typography>
+    <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}>w czasie ilu przebiegow jest drukowana strona w deukarce laserowej - odp: 1</Typography>
     <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}></Typography>
     <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}></Typography>
     <Typography sx={{color: 'white', fontSize: 50, border: 'solid 5px white', m: 5, p: 2}}></Typography>
