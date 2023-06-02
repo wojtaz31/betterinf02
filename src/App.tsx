@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Tescik from "./Tescik"
 import NewBar from "./newBar";
 import Dzisiejsze from "./Dzisiejsze";
@@ -10,7 +10,7 @@ export default function App() {
       display: "flex",
       flexFlow: "column"
   }}>
-    <BrowserRouter>
+    <HashRouter>
     <NewBar></NewBar>
                     <div style={{flex: "1 1 auto"}}>                  
                         <Routes> 
@@ -20,7 +20,7 @@ export default function App() {
                             <Route path="*" element={<></>} />
                         </Routes>
                     </div>
-      </BrowserRouter>
+      </HashRouter>
       </div>
   )
 }
