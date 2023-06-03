@@ -13,8 +13,6 @@ export default function NewBar() {
                 <Typography style={{
                     marginRight: '4em',
                     letterSpacing: '2px',
-                    textShadow: '0px 3px 6px rgba(66, 68, 90, 1)',
-                    fontFamily: 'Roboto',
                     fontSize: '2em'
                 }}>PANEL NAWIGACYJNY</Typography>
                 
